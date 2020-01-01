@@ -1,0 +1,7 @@
+0$F:/hsy/code/test/Untitled2.c$
+1#$include$$"./head/test.h"$
+2$INT$$add$$($$INT$$a$,$INT$$b$$)$
+3${$
+4$RETURN$$a$+$b$
+5$}$
+6

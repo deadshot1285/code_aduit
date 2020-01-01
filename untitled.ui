@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1242</width>
+    <height>710</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>9</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="leftMargin">
+     <number>5</number>
+    </property>
+    <property name="topMargin">
+     <number>5</number>
+    </property>
+    <property name="rightMargin">
+     <number>5</number>
+    </property>
+    <property name="bottomMargin">
+     <number>5</number>
+    </property>
+    <item>
+     <widget class="QSplitter" name="splitter_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QTreeView" name="treeView"/>
+      <widget class="QSplitter" name="splitter">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="tabsClosable">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QTabWidget" name="tabWidget_2">
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="tab">
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei UI</family>
+          </font>
+         </property>
+         <attribute name="title">
+          <string>输出</string>
+         </attribute>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QTreeWidget" name="treeWidget">
+            <property name="styleSheet">
+             <string notr="true">QTreeView::branch:closed:has-children
+{
+    image: url(./resource/icon/expand-positive.png);/*图标*/
+    border-image: none;
+}
+
+QTreeView::branch:open:has-children
+{
+    image: url(./resource/icon/shrink-positive.png);/*图标*/
+    border-image: none;
+}</string>
+            </property>
+            <column>
+             <property name="text">
+              <string>文件名</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>行数</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>名称</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>风险水平</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>解决方式</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_2">
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei UI</family>
+          </font>
+         </property>
+         <attribute name="title">
+          <string>终端</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QTextEdit" name="textEdit_2">
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QTreeWidget" name="treeWidget_1">
+       <property name="styleSheet">
+        <string notr="true">QTreeView::branch:closed:has-children
+{
+    image: url(./resource/icon/expand-positive.png);/*图标*/
+    border-image: none;
+}
+
+QTreeView::branch:open:has-children
+{
+    image: url(./resource/icon/shrink-positive.png);/*图标*/
+    border-image: none;
+}</string>
+       </property>
+       <attribute name="headerDefaultSectionSize">
+        <number>110</number>
+       </attribute>
+       <attribute name="headerHighlightSections">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="headerMinimumSectionSize">
+        <number>30</number>
+       </attribute>
+       <column>
+        <property name="text">
+         <string>函数和变量</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>类型</string>
+        </property>
+       </column>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1242</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="File">
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="Open"/>
+    <addaction name="Save"/>
+    <addaction name="Saveas"/>
+    <addaction name="separator"/>
+    <addaction name="Close"/>
+    <addaction name="Closeall"/>
+    <addaction name="Exit"/>
+   </widget>
+   <widget class="QMenu" name="Edit">
+    <property name="title">
+     <string>编辑</string>
+    </property>
+    <addaction name="Undo"/>
+    <addaction name="Copy"/>
+    <addaction name="Cut"/>
+    <addaction name="Paste"/>
+    <addaction name="Goto"/>
+   </widget>
+   <widget class="QMenu" name="Window">
+    <property name="title">
+     <string>窗口</string>
+    </property>
+    <addaction name="Function"/>
+    <addaction name="Find"/>
+    <addaction name="Pie"/>
+    <addaction name="CMD"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>调试</string>
+    </property>
+    <addaction name="Compile"/>
+    <addaction name="Run"/>
+   </widget>
+   <addaction name="File"/>
+   <addaction name="Edit"/>
+   <addaction name="Window"/>
+   <addaction name="menu"/>
+  </widget>
+  <action name="New">
+   <property name="text">
+    <string>新建</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="Open">
+   <property name="text">
+    <string>打开文件</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei UI</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="Opendir">
+   <property name="text">
+    <string>打开文件夹</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei UI</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+O</string>
+   </property>
+  </action>
+  <action name="Save">
+   <property name="text">
+    <string>保存</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei UI</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="Saveas">
+   <property name="text">
+    <string>另存为</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei UI</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="Undo">
+   <property name="text">
+    <string>撤销</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei UI</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="Copy">
+   <property name="text">
+    <string>复制</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei UI</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="Cut">
+   <property name="text">
+    <string>剪切</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei UI</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="Paste">
+   <property name="text">
+    <string>粘贴</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei UI</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="Function">
+   <property name="text">
+    <string>风险函数管理</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei UI</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="Find">
+   <property name="text">
+    <string>查找和替换</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei UI</family>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="Goto">
+   <property name="text">
+    <string>转到定义</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei UI</family>
+    </font>
+   </property>
+  </action>
+  <action name="Close">
+   <property name="text">
+    <string>关闭标签</string>
+   </property>
+  </action>
+  <action name="Closeall">
+   <property name="text">
+    <string>关闭所有标签</string>
+   </property>
+  </action>
+  <action name="Exit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="Pie">
+   <property name="text">
+    <string>生成饼状图</string>
+   </property>
+  </action>
+  <action name="Compile">
+   <property name="text">
+    <string>编译</string>
+   </property>
+  </action>
+  <action name="Run">
+   <property name="text">
+    <string>运行</string>
+   </property>
+  </action>
+  <action name="CMD">
+   <property name="text">
+    <string>终端</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
